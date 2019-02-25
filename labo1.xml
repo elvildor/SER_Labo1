@@ -1,0 +1,55 @@
+<tournois>
+    <tournoi>
+        <partie>
+            <joueurBlanc>
+                <idFSE />
+                <nom />
+                <prenom />
+                <classementELO />
+            </joueurBlanc>
+            <joueurNoir>
+                <idFSE />
+                <nom />
+                <premon />
+                <classementELO />
+            </joueurNoir>
+            <arbitre>
+                <nom />
+                <prenom />
+            </arbitre>
+            <date>
+                <jour />
+                <mois />
+                <annee />
+                <heures />
+                <minutes />
+            </date>
+            <score />
+            <vainqueur />
+            <deroulement>
+                <tour>
+                    <numTour />
+                    <roque>
+                        <typeRoque />
+                    </roque>
+                    <echec />
+                    <echecEtMat />
+                    <matchNul />
+                </tour>
+                <tour>
+                    <numTour />
+                    <deplacement>
+                        <typePiece />
+                        <caseDepart />
+                        <caseArrivee />
+                        <pieceMangee />
+                        <promotionPion />
+                    </deplacement>
+                    <echec />
+                    <echecEtMat />
+                    <matchNul />
+                </tour>
+            </deroulement>
+        </partie>
+    </tournoi>
+</tournois>
