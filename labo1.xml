@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <tournois>
 	<tournoi>
 		<nomTournoi>tournoi du lac</nomTournoi>
@@ -116,6 +114,109 @@
 			</deroulement>
 		</partie>
 	</tournoi>
-</tournois>
-</tournois>
+	<tournoi>
+		<nomTournoi>tous les coups sont permis</nomTournoi>
+		<partie score = "1-0" vainqueur = "P1">
+			<joueur idFSE = "P5">
+				<nom>titi</nom>
+				<prenom>simonet</prenom>
+				<classementELO>2500</classementELO>
+			</joueur>
+			<joueurBlanc idFES = "P5"/>
+			<joueurNoir idFES = "P2"/>
+			<arbitre>
+				<nom>tata</nom>
+				<prenom>jone</prenom>
+			</arbitre>
+			<date>
+				<jour>21</jour >
+				<mois>11</mois >
+				<annee >2019</annee >
+				<heures>17</heures >
+				<minutes>32</minutes>
+			</date>
+			<deroulement>
+				<tour>
+					<roque type = "PetitRoque"/>
+					<echec/>
+				</tour>
+				<tour>
+					<deplacement piece = "Fou">
+						<caseDepart>C1</caseDepart>
+						<caseArrivee>B2</caseArrivee >
+						<pieceMangee type = "Dame"/>
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Pion">
+						<caseDepart>A7</caseDepart>
+						<caseArrivee>A8</caseArrivee >
+						<promotionPion type = "Dame"/>
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Roi">
+						<caseArrivee>C4</caseArrivee >
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Dame">
+						<caseDepart>A4</caseDepart>
+						<caseArrivee>C4</caseArrivee >
+					</deplacement>
+					<echecEtMat/>
+				</tour>
+			</deroulement>
+		</partie>
+		<partie score = "1-0" vainqueur = "P6">
+			<joueur idFSE = "P6">
+				<nom>toto</nom>
+				<prenom>simonet</prenom>
+				<classementELO>2500</classementELO>
+			</joueur>
+			<joueurBlanc idFES = "P6"/>
+			<joueurNoir idFES = "P2"/>
+			<arbitre>
+				<nom>tata</nom>
+				<prenom>yoyo</prenom>
+			</arbitre>
+			<date>
+				<jour>30</jour>
+				<mois>11</mois>
+				<annee >2056</annee>
+				<heures>23</heures>
+				<minutes>59</minutes>
+			</date>
+			<deroulement>
+				<tour>
+					<roque type = "GrandRoque"/>
+				</tour>
+				<tour>
+					<deplacement piece = "Fou">
+						<caseArrivee>B2</caseArrivee>
+						<pieceMangee type = "Fou"/>
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Pion">
+						<caseDepart>A7</caseDepart>
+						<caseArrivee>A8</caseArrivee>
+						<promotionPion type = "Dame"/>
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Roi">
+						<caseArrivee>C4</caseArrivee>
+					</deplacement>
+				</tour>
+				<tour>
+					<deplacement piece = "Dame">
+						<caseDepart>A4</caseDepart>
+						<caseArrivee>C4</caseArrivee>
+					</deplacement>
+					<echecEtMat/>
+				</tour>
+			</deroulement>
+		</partie>
+	</tournoi>
 </tournois>
