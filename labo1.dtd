@@ -1,57 +1,42 @@
+
 <?xml version = "1.0"?>
 
 <!ELEMENT tournois (tournoi)+>
-
-
 <!ELEMENT tournoi (nomTournoi, partie+)>
 <!ELEMENT nomTournoi (#PCDATA)>
-
-
 <!ELEMENT partie (joueurBlanc, joueurNoir, arbitre, date, deroulement)>
-<!ATTLIST partie score (1-0|½-½|0-1) #REQUIRED>
+<!ATTLIST partie score (1-0|0-1) #REQUIRED>
 <!-- à vérifier le format des valeurs obligatoires -->
 <!ATTLIST partie vainqueur IDREF #REQUIRED>
 <!-- to test-->
-
-
-
 <!ELEMENT joueurBlanc (nom, prenom, classementELO)>
 <!ATTLIST joueurBlanc idFSE ID #REQUIRED>
 <!ELEMENT nom           (#PCDATA)>
 <!ELEMENT prenom        (#PCDATA)>
 <!ELEMENT classementELO (#PCDATA)>
-
 <!ELEMENT joueurNoir (nom, prenom, classementELO)>
 <!ATTLIST joueurNoir idFSE ID #REQUIRED>
 <!-- nom, prenom, ELO ??? -->
-
 <!ELEMENT arbitre (nom, prenom)>
 <!-- nom, prenom -->
-
 <!ELEMENT date (jour, mois, annee, heures, minutes)>
 <!ELEMENT jour      (#PCDATA)>
 <!ELEMENT mois      (#PCDATA)>
 <!ELEMENT annee     (#PCDATA)>
 <!ELEMENT heures    (#PCDATA)>
 <!ELEMENT minutes   (#PCDATA)>
-
-
 <!ELEMENT deroulement (tour)+>
-
 <!ELEMENT tour ((roque|deplacement), (echec|echecEtMat|matchNul)?)>
-
 <!ELEMENT roque EMPTY>
-<!ATTLIST roque type (Petit Roque|Grand Roque) #REQUIRED>
-
+<!ATTLIST roque type (PetitRoque|GrandRoque) #REQUIRED>
 <!ELEMENT deplacement (caseDepart?, caseArrivee, pieceMangee?, promotionPion?)>
-<!ATTLIST deplacement piece (Tour|Cavalier|Fou|Dame|Roi|Pion)>
-<!ELEMENT caseDepart #PCDATA>
-<!ELEMENT caseArrivee #PCDATA>
+<!ATTLIST deplacement piece (Tour|Cavalier|Fou|Dame|Roi|Pion) #REQUIRED>
+<!ELEMENT caseDepart (#PCDATA)>
+<!ELEMENT caseArrivee (#PCDATA)>
 <!ELEMENT pieceMangee EMPTY>
-<!ATTLIST pieceMangee type (Tour|Cavalier|Fou|Dame|Pion)>
+<!ATTLIST pieceMangee type (Tour|Cavalier|Fou|Dame|Pion) #REQUIRED >
 <!ELEMENT promotionPion EMPTY>
-<!ATTLIST promotionPion type (Tour|Cavalier|Fou|Dame)>
-
+<!ATTLIST promotionPion type (Tour|Cavalier|Fou|Dame) #REQUIRED >
 <!ELEMENT echec EMPTY>
 <!ELEMENT echecEtMat EMPTY>
 <!ELEMENT matchNul EMPTY>
