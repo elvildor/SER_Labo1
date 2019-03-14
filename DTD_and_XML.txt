@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tournois [
 
+
+
 <!ELEMENT tournois (tournoi)+>
 <!ELEMENT tournoi (nomTournoi, partie+)>
 <!ELEMENT nomTournoi (#PCDATA)>
-<!ELEMENT partie (joueurBlanc, joueurNoir, arbitre, date, deroulement)>
+<!ELEMENT partie (joueur*,joueurBlanc, joueurNoir, arbitre, date, deroulement)>
 <!ATTLIST partie score (1-0|0-1) #REQUIRED>
 <!-- à vérifier le format des valeurs obligatoires -->
 <!ATTLIST partie vainqueur IDREF #REQUIRED>
 <!-- to test-->
-<!ELEMENT joueurBlanc (nom, prenom, classementELO)>
-<!ATTLIST joueurBlanc idFSE ID #REQUIRED>
+<!ELEMENT joueur (nom, prenom, classementELO)>
+<!ATTLIST joueur idFSE ID #REQUIRED>
 <!ELEMENT nom           (#PCDATA)>
 <!ELEMENT prenom        (#PCDATA)>
 <!ELEMENT classementELO (#PCDATA)>
-<!ELEMENT joueurNoir (nom, prenom, classementELO)>
-<!ATTLIST joueurNoir idFSE ID #REQUIRED>
+<!ELEMENT joueurBlanc ANY>
+<!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
+<!ELEMENT joueurNoir ANY>
+<!ATTLIST joueurNoir idFES IDREF #REQUIRED>
 <!-- nom, prenom, ELO ??? -->
 <!ELEMENT arbitre (nom, prenom)>
 <!-- nom, prenom -->
@@ -45,16 +49,18 @@
 	<tournoi>
 		<nomTournoi>tournoi du lac</nomTournoi>
 		<partie score = "1-0" vainqueur = "P1">
-			<joueurBlanc idFSE = "P1">
+			<joueur idFSE = "P1">
 				<nom>toto</nom>
 				<prenom>simonet</prenom>
 				<classementELO>2500</classementELO>
-			</joueurBlanc>
-			<joueurNoir idFSE = "P2">
+			</joueur>
+			<joueur idFSE = "P2">
 				<nom>titi</nom>
 				<prenom>simonet</prenom>
 				<classementELO>2500</classementELO>
-			</joueurNoir>
+			</joueur>
+			<joueurBlanc idFES = "P1"/>
+			<joueurNoir idFES = "P2"/>
 			<arbitre>
 				<nom>tata</nom>
 				<prenom>jone</prenom>
@@ -100,16 +106,18 @@
 			</deroulement>
 		</partie>
 		<partie score = "1-0" vainqueur = "P3">
-			<joueurBlanc idFSE = "P3">
+			<joueur idFSE = "P3">
 				<nom>toto</nom>
 				<prenom>simonet</prenom>
 				<classementELO>2500</classementELO>
-			</joueurBlanc>
-			<joueurNoir idFSE = "P4">
+			</joueur>
+			<joueur idFSE = "P4">
 				<nom>titi</nom>
 				<prenom>simonet</prenom>
 				<classementELO>2500</classementELO>
-			</joueurNoir>
+			</joueur>
+			<joueurBlanc idFES = "P1"/>
+			<joueurNoir idFES = "P2"/>
 			<arbitre>
 				<nom>tata</nom>
 				<prenom>jone</prenom>
@@ -153,4 +161,5 @@
 			</deroulement>
 		</partie>
 	</tournoi>
+</tournois>
 </tournois>
