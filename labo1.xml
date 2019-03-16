@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <tournois>
-	<tournoi>
+	<tournoi vainqueur = "P1">
 		<nomTournoi>tournoi du lac</nomTournoi>
-		<partie score = "1-0" vainqueur = "P1">
+		<partie score = "1-0">
 			<joueur idFSE = "P1">
 				<nom>toto</nom>
 				<prenom>simonet</prenom>
@@ -58,7 +59,7 @@
 				</tour>
 			</deroulement>
 		</partie>
-		<partie score = "1-0" vainqueur = "P3">
+		<partie score = "0.5-0.5">
 			<joueur idFSE = "P3">
 				<nom>toto</nom>
 				<prenom>simonet</prenom>
@@ -114,9 +115,9 @@
 			</deroulement>
 		</partie>
 	</tournoi>
-	<tournoi>
-		<nomTournoi>tous les coups sont permis</nomTournoi>
-		<partie score = "1-0" vainqueur = "P1">
+	<tournoi vainqueur = "P1">
+		<nomTournoi >tous les coups sont permis</nomTournoi>
+		<partie score = "1-0" >
 			<joueur idFSE = "P5">
 				<nom>titi</nom>
 				<prenom>simonet</prenom>
@@ -168,7 +169,7 @@
 				</tour>
 			</deroulement>
 		</partie>
-		<partie score = "1-0" vainqueur = "P6">
+		<partie score = "1-0">
 			<joueur idFSE = "P6">
 				<nom>toto</nom>
 				<prenom>simonet</prenom>

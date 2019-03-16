@@ -1,14 +1,10 @@
-
-<?xml version = "1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT tournois (tournoi)+>
 <!ELEMENT tournoi (nomTournoi, partie+)>
+<!ATTLIST tournoi vainqueur IDREF #REQUIRED>
 <!ELEMENT nomTournoi (#PCDATA)>
 <!ELEMENT partie (joueur*,joueurBlanc, joueurNoir, arbitre, date, deroulement)>
-<!ATTLIST partie score (1-0|0-1) #REQUIRED>
-<!-- à vérifier le format des valeurs obligatoires -->
-<!ATTLIST partie vainqueur IDREF #REQUIRED>
-<!-- to test-->
+<!ATTLIST partie score (1-0|0.5-0.5|0-1) #REQUIRED>
 <!ELEMENT joueur (nom, prenom, classementELO)>
 <!ATTLIST joueur idFSE ID #REQUIRED>
 <!ELEMENT nom           (#PCDATA)>
@@ -18,9 +14,7 @@
 <!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
 <!ELEMENT joueurNoir ANY>
 <!ATTLIST joueurNoir idFES IDREF #REQUIRED>
-<!-- nom, prenom, ELO ??? -->
 <!ELEMENT arbitre (nom, prenom)>
-<!-- nom, prenom -->
 <!ELEMENT date (jour, mois, annee, heures, minutes)>
 <!ELEMENT jour      (#PCDATA)>
 <!ELEMENT mois      (#PCDATA)>
@@ -42,16 +36,3 @@
 <!ELEMENT echec EMPTY>
 <!ELEMENT echecEtMat EMPTY>
 <!ELEMENT matchNul EMPTY>
-
-
-
-
-
-
-
-
-
-
-
-
-
