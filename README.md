@@ -1,8 +1,8 @@
 ## SER Labo1
-###Introduction
+### Introduction
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
-###DTD
+### DTD
     <?xml version="1.0" encoding="UTF-8"?>
     <!ELEMENT tournois (tournoi)+>
     <!ELEMENT tournoi (nomTournoi, partie+)>
@@ -42,7 +42,7 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     <!ELEMENT echecEtMat EMPTY>
     <!ELEMENT matchNul EMPTY>
 
-###XML
+### XML
 
     <?xml version="1.0" encoding="UTF-8"?>
     <tournois>
@@ -268,22 +268,22 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     	</tournoi>
     </tournois>
 
-###Une capture d’écran
+### Une capture d’écran
 code valider sur https://www.online-toolz.com/tools/xml-validator.php
 ![Capture](https://user-images.githubusercontent.com/47739482/54474526-262c5300-47e6-11e9-9d08-32f6601f3292.PNG)
-###Réponses aux différentes questions posées
+### Réponses aux différentes questions posées
 
-####Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
+#### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
 Rien
 
-####Est-ce possible dans votre DTD de représenter le fait qu’il ne peut y avoir que 20 parties au maximum dans un tournoi? Si oui,comment?
+#### Est-ce possible dans votre DTD de représenter le fait qu’il ne peut y avoir que 20 parties au maximum dans un tournoi? Si oui,comment?
 oui
 
 exemple:
 `<!ELEMENT tournoi (nomTournoi, partie1?,partie2?, ......,partie20?)>` 
 
 remarque : Ce serais très lourd.
-####Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
+#### Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
 oui
 
 exemple:
@@ -297,7 +297,7 @@ exemple:
 
 Mais cette implémantation n' est pas pratique inutilisable car un joueur très probablement vouloir jouer d' autre partie.
 
-###Conclution
+### Conclution
 
 
 
