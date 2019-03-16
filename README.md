@@ -295,7 +295,7 @@ exemple:
     <!ELEMENT joueurNoir (nom, prenom, classementELO)>
     <!ATTLIST joueurNoir idFSE ID #REQUIRED>
 
-Mais cette implémantation n' est pas pratique inutilisable car un joueur très probablement vouloir jouer d' autre partie.
+Mais cette implémantation n' est pas pratique car un joueur va très probablement vouloir jouer d' autre partie.
 
 ### Conclution
 
