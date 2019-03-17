@@ -275,7 +275,16 @@ code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ### Réponses aux différentes questions posées
 
 #### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
-Rien, on possède déjà cette information.
+On pourrait ajouter un attribut ELOjoueur dans chaque partie.
+
+    <!ELEMENT joueurBlanc ANY>
+    <!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
+    <!ATTLIST joueurBlanc ELO #REQUIRED>
+    <!ELEMENT joueurNoir ANY>
+    <!ATTLIST joueurNoir idFES IDREF #REQUIRED>
+    <!ATTLIST joueurBlanc ELO #REQUIRED>
+ 
+
 
 #### Est-ce possible dans votre DTD de représenter le fait qu’il ne peut y avoir que 20 parties au maximum dans un tournoi? Si oui,comment?
 oui
@@ -283,8 +292,7 @@ oui
 exemple:
 `<!ELEMENT tournoi (nomTournoi, partie?, partie?, ......, partie?)> <!-- avec 20x "partie" -->` 
 
-remarque : Ce serait très lourd.
-
+Remarque : Ce serait très lourd.
 #### Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
 oui
 
@@ -301,6 +309,8 @@ Mais cette implémantation n'est pas pratique car un joueur va très probablemen
 
 ### Conclusion
 Ce laboratoire était intéressant car on a pu construire notre propre fichier XML selon un cahier des charges fourni. On a pu y réfléchir et essayer de deviner quels étaient les éléments important à mettre en balise ou en attribut et quels élément étaient liés entre eux (déplacement/roque, par exemple).  
+
+Il nous a aussi permis de voir les possibilités (DTD, structure en arbre) et les limitations du XML.
 
 Le point faible de ce labo était la première session où l'on n'avait encore rien vu et l'on était laché dans vide. On a dû aller lire la suite du cours (en auto-didacte) pour savoir quoi faire afin de ne pas perdre une session de labo.  
 
