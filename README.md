@@ -1,4 +1,5 @@
 ## SER Labo1
+Jérémy Delay, Yoann Simonet
 ### Introduction
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
@@ -269,7 +270,7 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     </tournois>
 
 
-###Une capture d’écran
+### Une capture d’écran
 
 
 
@@ -278,7 +279,7 @@ Code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ### Réponses aux différentes questions posées
 
 
-####Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
+#### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
 On pourrait ajouter un attribut ELOjoueur dans chaque partie.
 
     <!ELEMENT joueurBlanc ANY>
@@ -312,7 +313,7 @@ exemple:
 
 Mais cette implémentation n’est pas pratique car un joueur va très probablement vouloir jouer d’autre parties.
 
-###Conclusion
+### Conclusion
 
 Ce TP était intéressant car il nous a permis de voir les possibilité (DTD, structure en arbre) et les limitations du XML.
 
