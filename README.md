@@ -48,227 +48,227 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
     <?xml version="1.0" encoding="UTF-8"?>
     <tournois>
-    	<joueur idFSE = "P1">
-    		<nom>toto</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<joueur idFSE = "P2">
-    		<nom>titi</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<joueur idFSE = "P3">
-    		<nom>toto</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<joueur idFSE = "P4">
-    		<nom>titi</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<joueur idFSE = "P5">
-    		<nom>titi</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<joueur idFSE = "P6">
-    		<nom>toto</nom>
-    		<prenom>simonet</prenom>
-    		<classementELO>2500</classementELO>
-    	</joueur>
-    	<tournoi vainqueur = "P1">
-    		<nomTournoi>tournoi du lac</nomTournoi>
-    		<partie score = "1-0">
-    			<joueurBlanc idFES = "P1"/>
-    			<joueurNoir idFES = "P2"/>
-    			<arbitre>
-    				<nom>tata</nom>
-    				<prenom>jone</prenom>
-    			</arbitre>
-    			<date>
-    				<jour>21</jour >
-    				<mois>11</mois >
-    				<annee >2019</annee >
-    				<heures>17</heures >
-    				<minutes>32</minutes>
-    			</date>
-    			<deroulement>
-    				<tour>
-    					<roque type = "PetitRoque"/>
-    					<echec/>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Fou">
-    						<caseDepart>C1</caseDepart>
-    						<caseArrivee>B2</caseArrivee >
-    						<pieceMangee type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Pion">
-    						<caseDepart>A7</caseDepart>
-    						<caseArrivee>A8</caseArrivee >
-    						<promotionPion type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Roi">
-    						<caseArrivee>C4</caseArrivee >
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Dame">
-    						<caseDepart>A4</caseDepart>
-    						<caseArrivee>C4</caseArrivee >
-    					</deplacement>
-    					<echecEtMat/>
-    				</tour>
-    			</deroulement>
-    		</partie>
-    		<partie score = "0.5-0.5">
-    			<joueurBlanc idFES = "P1"/>
-    			<joueurNoir idFES = "P2"/>
-    			<arbitre>
-    				<nom>tata</nom>
-    				<prenom>jone</prenom>
-    			</arbitre>
-    			<date>
-    				<jour>30</jour>
-    				<mois>11</mois>
-    				<annee >2019</annee>
-    				<heures>17</heures>
-    				<minutes>32</minutes>
-    			</date>
-    			<deroulement>
-    				<tour>
-    					<roque type = "GrandRoque"/>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Fou">
-    						<caseArrivee>B2</caseArrivee>
-    						<pieceMangee type = "Fou"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Pion">
-    						<caseDepart>A7</caseDepart>
-    						<caseArrivee>A8</caseArrivee>
-    						<promotionPion type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Roi">
-    						<caseArrivee>C4</caseArrivee>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Dame">
-    						<caseDepart>A4</caseDepart>
-    						<caseArrivee>C4</caseArrivee>
-    					</deplacement>
-    					<echecEtMat/>
-    				</tour>
-    			</deroulement>
-    		</partie>
-    	</tournoi>
-    	<tournoi vainqueur = "P1">
-    		<nomTournoi >tous les coups sont permis</nomTournoi>
-    		<partie score = "1-0" >
-    			<joueurBlanc idFES = "P5"/>
-    			<joueurNoir idFES = "P2"/>
-    			<arbitre>
-    				<nom>tata</nom>
-    				<prenom>jone</prenom>
-    			</arbitre>
-    			<date>
-    				<jour>21</jour >
-    				<mois>11</mois >
-    				<annee >2019</annee >
-    				<heures>17</heures >
-    				<minutes>32</minutes>
-    			</date>
-    			<deroulement>
-    				<tour>
-    					<roque type = "PetitRoque"/>
-    					<echec/>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Fou">
-    						<caseDepart>C1</caseDepart>
-    						<caseArrivee>B2</caseArrivee >
-    						<pieceMangee type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Pion">
-    						<caseDepart>A7</caseDepart>
-    						<caseArrivee>A8</caseArrivee >
-    						<promotionPion type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Roi">
-    						<caseArrivee>C4</caseArrivee >
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Dame">
-    						<caseDepart>A4</caseDepart>
-    						<caseArrivee>C4</caseArrivee >
-    					</deplacement>
-    					<echecEtMat/>
-    				</tour>
-    			</deroulement>
-    		</partie>
-    		<partie score = "1-0">
-    			<joueurBlanc idFES = "P6"/>
-    			<joueurNoir idFES = "P2"/>
-    			<arbitre>
-    				<nom>tata</nom>
-    				<prenom>yoyo</prenom>
-    			</arbitre>
-    			<date>
-    				<jour>30</jour>
-    				<mois>11</mois>
-    				<annee >2056</annee>
-    				<heures>23</heures>
-    				<minutes>59</minutes>
-    			</date>
-    			<deroulement>
-    				<tour>
-    					<roque type = "GrandRoque"/>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Fou">
-    						<caseArrivee>B2</caseArrivee>
-    						<pieceMangee type = "Fou"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Pion">
-    						<caseDepart>A7</caseDepart>
-    						<caseArrivee>A8</caseArrivee>
-    						<promotionPion type = "Dame"/>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Roi">
-    						<caseArrivee>C4</caseArrivee>
-    					</deplacement>
-    				</tour>
-    				<tour>
-    					<deplacement piece = "Dame">
-    						<caseDepart>A4</caseDepart>
-    						<caseArrivee>C4</caseArrivee>
-    					</deplacement>
-    					<echecEtMat/>
-    				</tour>
-    			</deroulement>
-    		</partie>
-    	</tournoi>
-    </tournois>
+		<joueur idFSE = "P1">
+			<nom>toto</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<joueur idFSE = "P2">
+			<nom>titi</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<joueur idFSE = "P3">
+			<nom>tata</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<joueur idFSE = "P4">
+			<nom>tutu</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<joueur idFSE = "P5">
+			<nom>moi</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<joueur idFSE = "P6">
+			<nom>lui</nom>
+			<prenom>simonet</prenom>
+			<classementELO>2500</classementELO>
+		</joueur>
+		<tournoi vainqueur = "P1">
+			<nomTournoi>tournoi du lac</nomTournoi>
+			<partie score = "1-0">
+				<joueurBlanc idFES = "P1"/>
+				<joueurNoir idFES = "P2"/>
+				<arbitre>
+					<nom>tata</nom>
+					<prenom>jone</prenom>
+				</arbitre>
+				<date>
+					<jour>21</jour >
+					<mois>11</mois >
+					<annee >2019</annee >
+					<heures>17</heures >
+					<minutes>32</minutes>
+				</date>
+				<deroulement>
+					<tour>
+						<roque type = "PetitRoque"/>
+						<echec/>
+					</tour>
+					<tour>
+						<deplacement piece = "Fou">
+							<caseDepart>C1</caseDepart>
+							<caseArrivee>B2</caseArrivee >
+							<pieceMangee type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Pion">
+							<caseDepart>A7</caseDepart>
+							<caseArrivee>A8</caseArrivee >
+							<promotionPion type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Roi">
+							<caseArrivee>C4</caseArrivee >
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Dame">
+							<caseDepart>A4</caseDepart>
+							<caseArrivee>C4</caseArrivee >
+						</deplacement>
+						<echecEtMat/>
+					</tour>
+				</deroulement>
+			</partie>
+			<partie score = "0.5-0.5">
+				<joueurBlanc idFES = "P1"/>
+				<joueurNoir idFES = "P2"/>
+				<arbitre>
+					<nom>tata</nom>
+					<prenom>jone</prenom>
+				</arbitre>
+				<date>
+					<jour>30</jour>
+					<mois>11</mois>
+					<annee >2019</annee>
+					<heures>17</heures>
+					<minutes>32</minutes>
+				</date>
+				<deroulement>
+					<tour>
+						<roque type = "GrandRoque"/>
+					</tour>
+					<tour>
+						<deplacement piece = "Fou">
+							<caseArrivee>B2</caseArrivee>
+							<pieceMangee type = "Fou"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Pion">
+							<caseDepart>A7</caseDepart>
+							<caseArrivee>A8</caseArrivee>
+							<promotionPion type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Roi">
+							<caseArrivee>C4</caseArrivee>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Dame">
+							<caseDepart>A4</caseDepart>
+							<caseArrivee>C4</caseArrivee>
+						</deplacement>
+						<matchNul/>
+					</tour>
+				</deroulement>
+			</partie>
+		</tournoi>
+		<tournoi vainqueur = "P6">
+			<nomTournoi >tous les coups sont permis</nomTournoi>
+			<partie score = "1-0" >
+				<joueurBlanc idFES = "P5"/>
+				<joueurNoir idFES = "P2"/>
+				<arbitre>
+					<nom>tata</nom>
+					<prenom>jone</prenom>
+				</arbitre>
+				<date>
+					<jour>21</jour >
+					<mois>11</mois >
+					<annee >2019</annee >
+					<heures>17</heures >
+					<minutes>32</minutes>
+				</date>
+				<deroulement>
+					<tour>
+						<roque type = "PetitRoque"/>
+						<echec/>
+					</tour>
+					<tour>
+						<deplacement piece = "Fou">
+							<caseDepart>C1</caseDepart>
+							<caseArrivee>B2</caseArrivee >
+							<pieceMangee type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Pion">
+							<caseDepart>A7</caseDepart>
+							<caseArrivee>A8</caseArrivee >
+							<promotionPion type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Roi">
+							<caseArrivee>C4</caseArrivee >
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Dame">
+							<caseDepart>A4</caseDepart>
+							<caseArrivee>C4</caseArrivee >
+						</deplacement>
+						<echecEtMat/>
+					</tour>
+				</deroulement>
+			</partie>
+			<partie score = "1-0">
+				<joueurBlanc idFES = "P6"/>
+				<joueurNoir idFES = "P2"/>
+				<arbitre>
+					<nom>tata</nom>
+					<prenom>yoyo</prenom>
+				</arbitre>
+				<date>
+					<jour>30</jour>
+					<mois>11</mois>
+					<annee >2056</annee>
+					<heures>23</heures>
+					<minutes>59</minutes>
+				</date>
+				<deroulement>
+					<tour>
+						<roque type = "GrandRoque"/>
+					</tour>
+					<tour>
+						<deplacement piece = "Fou">
+							<caseArrivee>B2</caseArrivee>
+							<pieceMangee type = "Fou"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Pion">
+							<caseDepart>A7</caseDepart>
+							<caseArrivee>A8</caseArrivee>
+							<promotionPion type = "Dame"/>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Roi">
+							<caseArrivee>C4</caseArrivee>
+						</deplacement>
+					</tour>
+					<tour>
+						<deplacement piece = "Dame">
+							<caseDepart>A4</caseDepart>
+							<caseArrivee>C4</caseArrivee>
+						</deplacement>
+						<echecEtMat/>
+					</tour>
+				</deroulement>
+			</partie>
+		</tournoi>
+	</tournois>
 
 
 
