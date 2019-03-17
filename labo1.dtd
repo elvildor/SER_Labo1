@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT tournois (tournoi)+>
-<!ELEMENT tournoi (nomTournoi, partie+)>
-<!ATTLIST tournoi vainqueur IDREF #REQUIRED>
-<!ELEMENT nomTournoi (#PCDATA)>
-<!ELEMENT partie (joueur*,joueurBlanc, joueurNoir, arbitre, date, deroulement)>
-<!ATTLIST partie score (1-0|0.5-0.5|0-1) #REQUIRED>
+<!ELEMENT tournois (joueur+,tournoi+)>
 <!ELEMENT joueur (nom, prenom, classementELO)>
 <!ATTLIST joueur idFSE ID #REQUIRED>
 <!ELEMENT nom           (#PCDATA)>
 <!ELEMENT prenom        (#PCDATA)>
 <!ELEMENT classementELO (#PCDATA)>
+<!ELEMENT tournoi (nomTournoi, partie+)>
+<!ATTLIST tournoi vainqueur IDREF #REQUIRED>
+<!ELEMENT nomTournoi (#PCDATA)>
+<!ELEMENT partie (joueurBlanc, joueurNoir, arbitre, date, deroulement)>
+<!ATTLIST partie score (1-0|0.5-0.5|0-1) #REQUIRED>
 <!ELEMENT joueurBlanc ANY>
 <!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
 <!ELEMENT joueurNoir ANY>

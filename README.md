@@ -4,18 +4,17 @@ Jérémy Delay, Yoann Simonet
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
 ### DTD
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!ELEMENT tournois (tournoi)+>
-    <!ELEMENT tournoi (nomTournoi, partie+)>
-    <!ATTLIST tournoi vainqueur IDREF #REQUIRED>
-    <!ELEMENT nomTournoi (#PCDATA)>
-    <!ELEMENT partie (joueur*,joueurBlanc, joueurNoir, arbitre, date, deroulement)>
-    <!ATTLIST partie score (1-0|0.5-0.5|0-1) #REQUIRED>
+    <!ELEMENT tournois (joueur+,tournoi+)>
     <!ELEMENT joueur (nom, prenom, classementELO)>
     <!ATTLIST joueur idFSE ID #REQUIRED>
     <!ELEMENT nom   (#PCDATA)>
     <!ELEMENT prenom(#PCDATA)>
     <!ELEMENT classementELO (#PCDATA)>
+    <!ELEMENT tournoi (nomTournoi, partie+)>
+    <!ATTLIST tournoi vainqueur IDREF #REQUIRED>
+    <!ELEMENT nomTournoi (#PCDATA)>
+    <!ELEMENT partie (joueurBlanc, joueurNoir, arbitre, date, deroulement)>
+    <!ATTLIST partie score (1-0|0.5-0.5|0-1) #REQUIRED>
     <!ELEMENT joueurBlanc ANY>
     <!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
     <!ELEMENT joueurNoir ANY>
@@ -45,21 +44,40 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
 ### XML
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <tournois>
+    	<joueur idFSE = "P1">
+    		<nom>toto</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
+    	<joueur idFSE = "P2">
+    		<nom>titi</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
+    	<joueur idFSE = "P3">
+    		<nom>toto</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
+    	<joueur idFSE = "P4">
+    		<nom>titi</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
+    	<joueur idFSE = "P5">
+    		<nom>titi</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
+    	<joueur idFSE = "P6">
+    		<nom>toto</nom>
+    		<prenom>simonet</prenom>
+    		<classementELO>2500</classementELO>
+    	</joueur>
     	<tournoi vainqueur = "P1">
     		<nomTournoi>tournoi du lac</nomTournoi>
     		<partie score = "1-0">
-    			<joueur idFSE = "P1">
-    				<nom>toto</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
-    			<joueur idFSE = "P2">
-    				<nom>titi</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
     			<joueurBlanc idFES = "P1"/>
     			<joueurNoir idFES = "P2"/>
     			<arbitre>
@@ -107,16 +125,6 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     			</deroulement>
     		</partie>
     		<partie score = "0.5-0.5">
-    			<joueur idFSE = "P3">
-    				<nom>toto</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
-    			<joueur idFSE = "P4">
-    				<nom>titi</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
     			<joueurBlanc idFES = "P1"/>
     			<joueurNoir idFES = "P2"/>
     			<arbitre>
@@ -165,11 +173,6 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     	<tournoi vainqueur = "P1">
     		<nomTournoi >tous les coups sont permis</nomTournoi>
     		<partie score = "1-0" >
-    			<joueur idFSE = "P5">
-    				<nom>titi</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
     			<joueurBlanc idFES = "P5"/>
     			<joueurNoir idFES = "P2"/>
     			<arbitre>
@@ -217,11 +220,6 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     			</deroulement>
     		</partie>
     		<partie score = "1-0">
-    			<joueur idFSE = "P6">
-    				<nom>toto</nom>
-    				<prenom>simonet</prenom>
-    				<classementELO>2500</classementELO>
-    			</joueur>
     			<joueurBlanc idFES = "P6"/>
     			<joueurNoir idFES = "P2"/>
     			<arbitre>
@@ -270,12 +268,13 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     </tournois>
 
 
+
 ### Une capture d’écran
 
 
 
 Code validé sur https://www.online-toolz.com/tools/xml-validator.php
-![Capture](https://user-images.githubusercontent.com/47739482/54474526-262c5300-47e6-11e9-9d08-32f6601f3292.PNG)
+![](../Capture.PNG)
 ### Réponses aux différentes questions posées
 
 
@@ -315,7 +314,11 @@ Mais cette implémentation n’est pas pratique car un joueur va très probablem
 
 ### Conclusion
 
-Ce TP était intéressant car il nous a permis de voir les possibilité (DTD, structure en arbre) et les limitations du XML.
+Ce laboratoire était intéressant car on a pu construire notre propre fichier XML selon un cahier des charges fourni. On a pu y réfléchir et essayer de deviner quels étaient les éléments important à mettre en balise ou en attribut et quels élément étaient liés entre eux (déplacement/roque, par exemple).
+
+Il nous a aussi permis de voir les possibilités (DTD, structure en arbre) et les limitations du XML.
+
+Le point faible de ce labo était la première session où l'on n'avait encore rien vu et l'on était laché dans vide. On a dû aller lire la suite du cours (en auto-didacte) pour savoir quoi faire afin de ne pas perdre une session de labo.
 
 
 
