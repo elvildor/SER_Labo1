@@ -277,6 +277,7 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
 Code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ![](../Capture.PNG)
+![Capture](https://user-images.githubusercontent.com/47739482/54495522-df715280-48e4-11e9-8ffc-167dab79655e.PNG)
 
 ### Réponses aux différentes questions posées
 
