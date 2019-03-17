@@ -3,6 +3,7 @@ Jérémy Delay, Yoann Simonet
 ### Introduction
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
+
 ### DTD
     <!ELEMENT tournois (joueur+,tournoi+)>
     <!ELEMENT joueur (nom, prenom, classementELO)>
@@ -44,6 +45,8 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
 ### XML
 
+
+    <?xml version="1.0" encoding="UTF-8"?>
     <tournois>
     	<joueur idFSE = "P1">
     		<nom>toto</nom>
@@ -269,14 +272,13 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
 
 
+
 ### Une capture d’écran
-
-
 
 Code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ![](../Capture.PNG)
-### Réponses aux différentes questions posées
 
+### Réponses aux différentes questions posées
 
 #### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
 On pourrait ajouter un attribut ELOjoueur dans chaque partie.
@@ -294,7 +296,7 @@ On pourrait ajouter un attribut ELOjoueur dans chaque partie.
 oui
 
 exemple:
-`<!ELEMENT tournoi (nomTournoi, partie?,partie?, ......,partie?)>` avec 20 parties 
+`<!ELEMENT tournoi (nomTournoi, partie?, partie?, ......, partie?)> <!-- avec 20x "partie" -->` 
 
 Remarque : Ce serait très lourd.
 #### Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
@@ -309,12 +311,10 @@ exemple:
     <!ELEMENT joueurNoir (nom, prenom, classementELO)>
     <!ATTLIST joueurNoir idFSE ID #REQUIRED>
 
-
-Mais cette implémentation n’est pas pratique car un joueur va très probablement vouloir jouer d’autre parties.
+Mais cette implémantation n'est pas pratique car un joueur va très probablement vouloir jouer plus qu'une partie.
 
 ### Conclusion
-
-Ce laboratoire était intéressant car on a pu construire notre propre fichier XML selon un cahier des charges fourni. On a pu y réfléchir et essayer de deviner quels étaient les éléments important à mettre en balise ou en attribut et quels élément étaient liés entre eux (déplacement/roque, par exemple).
+Ce laboratoire était intéressant car on a pu construire notre propre fichier XML selon un cahier des charges fourni. On a pu y réfléchir et essayer de deviner quels étaient les éléments important à mettre en balise ou en attribut et quels élément étaient liés entre eux (déplacement/roque, par exemple).  
 
 Il nous a aussi permis de voir les possibilités (DTD, structure en arbre) et les limitations du XML.
 
