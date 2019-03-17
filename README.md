@@ -47,35 +47,35 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 
 
     <?xml version="1.0" encoding="UTF-8"?>
-    <tournois>
+	<tournois>
 		<joueur idFSE = "P1">
-			<nom>toto</nom>
-			<prenom>simonet</prenom>
+			<nom>simonet</nom>
+			<prenom>toto</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<joueur idFSE = "P2">
-			<nom>titi</nom>
-			<prenom>simonet</prenom>
+			<nom>simonet</nom>
+			<prenom>titi</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<joueur idFSE = "P3">
-			<nom>tata</nom>
-			<prenom>simonet</prenom>
+			<nom>simonet</nom>
+			<prenom>tata</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<joueur idFSE = "P4">
-			<nom>tutu</nom>
-			<prenom>simonet</prenom>
+			<nom>delay</nom>
+			<prenom>tutu</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<joueur idFSE = "P5">
-			<nom>moi</nom>
-			<prenom>simonet</prenom>
+			<nom>delay</nom>
+			<prenom>moi</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<joueur idFSE = "P6">
-			<nom>lui</nom>
-			<prenom>simonet</prenom>
+			<nom>delay</nom>
+			<prenom>lui</prenom>
 			<classementELO>2500</classementELO>
 		</joueur>
 		<tournoi vainqueur = "P1">
@@ -269,6 +269,7 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
 			</partie>
 		</tournoi>
 	</tournois>
+
 
 
 
