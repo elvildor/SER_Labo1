@@ -2,6 +2,7 @@
 ### Introduction
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
+
 ### DTD
     <?xml version="1.0" encoding="UTF-8"?>
     <!ELEMENT tournois (tournoi)+>
@@ -43,7 +44,6 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     <!ELEMENT matchNul EMPTY>
 
 ### XML
-
     <?xml version="1.0" encoding="UTF-8"?>
     <tournois>
     	<tournoi vainqueur = "P1">
@@ -269,20 +269,22 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     </tournois>
 
 ### Une capture d’écran
-code valider sur https://www.online-toolz.com/tools/xml-validator.php
+code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ![Capture](https://user-images.githubusercontent.com/47739482/54474526-262c5300-47e6-11e9-9d08-32f6601f3292.PNG)
+
 ### Réponses aux différentes questions posées
 
 #### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
-Rien
+Rien, on possède déjà cette information.
 
 #### Est-ce possible dans votre DTD de représenter le fait qu’il ne peut y avoir que 20 parties au maximum dans un tournoi? Si oui,comment?
 oui
 
 exemple:
-`<!ELEMENT tournoi (nomTournoi, partie1?,partie2?, ......,partie20?)>` 
+`<!ELEMENT tournoi (nomTournoi, partie?, partie?, ......, partie?)> <!-- avec 20x "partie" -->` 
 
-remarque : Ce serais très lourd.
+remarque : Ce serait très lourd.
+
 #### Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
 oui
 
@@ -295,9 +297,11 @@ exemple:
     <!ELEMENT joueurNoir (nom, prenom, classementELO)>
     <!ATTLIST joueurNoir idFSE ID #REQUIRED>
 
-Mais cette implémantation n' est pas pratique car un joueur va très probablement vouloir jouer d' autre partie.
+Mais cette implémantation n'est pas pratique car un joueur va très probablement vouloir jouer plus qu'une partie.
 
-### Conclution
+### Conclusion
+Ce laboratoire était intéressant car on a pu construire notre propre fichier XML selon un cahier des charges fourni. On a pu y réfléchir et essayer de deviner quels étaient les éléments important à mettre en balise ou en attribut et quels élément étaient liés entre eux (déplacement/roque, par exemple).  
 
+Le point faible de ce labo était la première session où l'on n'avait encore rien vu et l'on était laché dans vide. On a dû aller lire la suite du cours (en auto-didacte) pour savoir quoi faire afin de ne pas perdre une session de labo.  
 
 
