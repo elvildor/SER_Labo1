@@ -269,17 +269,17 @@ les parties d’échecs ayant été jouées dans le cadre de la FSE dans différ
     </tournois>
 
 
-###une capture d’écran
+###Une capture d’écran
 
 
 
-code valider sur https://www.online-toolz.com/tools/xml-validator.php
+Code validé sur https://www.online-toolz.com/tools/xml-validator.php
 ![Capture](https://user-images.githubusercontent.com/47739482/54474526-262c5300-47e6-11e9-9d08-32f6601f3292.PNG)
 ### Réponses aux différentes questions posées
 
 
 ####Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
-On pourrais ajouter un element ELOjoueur dans chaque partie.
+On pourrait ajouter un attribut ELOjoueur dans chaque partie.
 
     <!ELEMENT joueurBlanc ANY>
     <!ATTLIST joueurBlanc idFES IDREF #REQUIRED>
@@ -287,19 +287,16 @@ On pourrais ajouter un element ELOjoueur dans chaque partie.
     <!ELEMENT joueurNoir ANY>
     <!ATTLIST joueurNoir idFES IDREF #REQUIRED>
     <!ATTLIST joueurBlanc ELO #REQUIRED>
+ 
 
-=======
-#### Imaginons que vous souhaitez enregistrer le classement ELO que chaque joueur d’une partie avait au moment où elle a été jouée, qu’est-ce qu’il faudrait modifier dans votre DTD?
-Rien
->>>>>>> f53aa3626e639d0b09e266e55bce3a3e037ea013
 
 #### Est-ce possible dans votre DTD de représenter le fait qu’il ne peut y avoir que 20 parties au maximum dans un tournoi? Si oui,comment?
 oui
 
 exemple:
-`<!ELEMENT tournoi (nomTournoi, partie1?,partie2?, ......,partie20?)>` 
+`<!ELEMENT tournoi (nomTournoi, partie?,partie?, ......,partie?)>` avec 20 parties 
 
-remarque : Ce serais très lourd.
+Remarque : Ce serait très lourd.
 #### Est-ce possible dans votre DTD de représenter le fait que les 2 joueurs d’une partie doivent être différents?
 oui
 
@@ -313,12 +310,11 @@ exemple:
     <!ATTLIST joueurNoir idFSE ID #REQUIRED>
 
 
-Mais cette implémantation n' est pas pratique car un joueur va très probablement vouloir jouer d' autre parties.
+Mais cette implémentation n’est pas pratique car un joueur va très probablement vouloir jouer d’autre parties.
 
 ###Conclusion
 
-
-
+Ce TP était intéressant car il nous a permis de voir les possibilité (DTD, structure en arbre) et les limitations du XML.
 
 
 
