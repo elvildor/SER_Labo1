@@ -1,4 +1,5 @@
 ## SER Labo1
+Jérémy Delay, Yoann Simonet
 ### Introduction
 On souhaite enregistrer dans un document XML toutes 
 les parties d’échecs ayant été jouées dans le cadre de la FSE dans différents tournois.
